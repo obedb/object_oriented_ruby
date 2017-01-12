@@ -96,7 +96,7 @@ class Products
 	# 	@product_color = product_color
 	# end 
 	def info
-		"#{@roduct_color} #{@product_price} and the brand is #{@product_brand}"
+		"#{@product_color} #{@product_price} and the brand is #{@product_brand}"
 	end 
 end 
 
