@@ -68,10 +68,10 @@ class Products
 	attr_reader :product_color, :product_price,:product_brand
 	attr_writer :product_price
 
-	def initialize(product_color, product_price, product_brand)
-		@product_color = product_color
-		@product_price = product_price
-		@product_brand = product_brand
+	def initialize(product_hash)
+		@product_color = product_hash[:product_color]
+		@product_price = product_hash[:product_price]
+		@product_brand = product_hash[:product_brand]
 
 	end 
 
@@ -100,9 +100,10 @@ class Products
 	end 
 end 
 
-product1 = Products.new("blue", 2000, "volvo")
+product1 = Products.new(product_price: 2000, product_color: "blue", product_brand: "volvo")
 
-puts product1.product_color
-product1.product_price = 8000
-puts product1.product_price
-puts product1.product_brand
+# puts product1.product_color
+# product1.product_price = 8000
+#puts product1.product_price
+#puts product1.product_brand
+puts product1.info 
